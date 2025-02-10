@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgba(121, 69, 255, 1);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    background-color: rgba(121, 69, 255, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-board-class {
+    position: relative;
+}
+
+.row-board-class {
+    margin-bottom: 4px;
+    margin-top: 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.complete-board-class {
+    display: flex;
+}
+
+.game-screen-token {
+    position: absolute;
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+}
+
+.game-screen-token-red {
+    background-color: red;
+}
+
+.game-screen-token-yellow {
+    background-color: yellow;
+}
+
+.game-screen-token-0-0 {
+    top: 18px;
+    left: 20px;
+}
+
+.game-screen-token-1-0 {
+    top: 18px;
+    left: 108px;
+}
+
+.game-screen-token-2-0 {
+    top: 18px;
+    left: 195px;
+}
+
+.game-screen-token-3-0 {
+    top: 18px;
+    left: 284px;
+}
+
+.game-screen-token-4-0 {
+    top: 18px;
+    left: 372px;
+}
+
+.game-screen-token-5-0 {
+    top: 18px;
+    left: 460px;
+}
+
+.game-screen-token-6-0 {
+    top: 18px;
+    left: 548px;
+}
+
+.game-screen-token-0-1 {
+    top: 105px;
+    left: 20px;
+}
+
+.game-screen-token-1-1 {
+    top: 105px;
+    left: 108px;
+}
+
+
+.game-screen-token-2-1 {
+    top: 105px;
+    left: 195px;
+}
+
+.game-screen-token-3-1 {
+    top: 105px;
+    left: 284px;
+}
+
+.game-screen-token-4-1 {
+    top: 105px;
+    left: 372px;
+}
+
+.game-screen-token-5-1 {
+    top: 105px;
+    left: 460px;
+}
+
+.game-screen-token-6-1 {
+    top: 105px;
+    left: 548px;
+}
+
+.game-screen-token-0-2 {
+    top: 194px;
+    left: 20px;
+}
+
+.game-screen-token-1-2 {
+    top: 194px;
+    left: 108px;
+}
+
+.game-screen-token-2-2 {
+    top: 194px;
+    left: 195px;
+}
+
+.game-screen-token-3-2 {
+    top: 194px;
+    left: 284px;
+}
+
+.game-screen-token-4-2 {
+    top: 194px;
+    left: 372px;
+}
+
+.game-screen-token-5-2 {
+    top: 194px;
+    left: 460px;
+}
+
+.game-screen-token-6-2 {
+    top: 194px;
+    left: 548px;
+}
+
+.game-screen-token-0-3 {
+    top: 282px;
+    left: 20px;
+}
+
+.game-screen-token-1-3 {
+    top: 282px;
+    left: 108px;
+}
+
+.game-screen-token-2-3 {
+    top: 282px;
+    left: 195px;
+}
+
+.game-screen-token-3-3 {
+    top: 282px;
+    left: 284px;
+}
+
+.game-screen-token-4-3 {
+    top: 282px;
+    left: 372px;
+}
+
+.game-screen-token-5-3 {
+    top: 282px;
+    left: 460px;
+}
+
+.game-screen-token-6-3 {
+    top: 282px;
+    left: 548px;
+}
+
+.game-screen-token-0-4 {
+    top: 370px;
+    left: 20px;
+}
+
+.game-screen-token-1-4 {
+    top: 370px;
+    left: 108px;
+}
+
+.game-screen-token-2-4 {
+    top: 370px;
+    left: 195px;
+}
+
+.game-screen-token-3-4 {
+    top: 370px;
+    left: 284px;
+}
+
+.game-screen-token-4-4 {
+    top: 370px;
+    left: 372px;
+}
+
+.game-screen-token-5-4 {
+    top: 370px;
+    left: 460px;
+}
+
+.game-screen-token-6-4 {
+    top: 370px;
+    left: 548px;
+}
+
+.game-screen-token-0-5 {
+    top: 458px;
+    left: 20px;
+}
+
+.game-screen-token-1-5 {
+    top: 458px;
+    left: 108px;
+}
+
+.game-screen-token-2-5 {
+    top: 458px;
+    left: 195px;
+}
+
+.game-screen-token-3-5 {
+    top: 458px;
+    left: 284px;
+}
+
+.game-screen-token-4-5 {
+    top: 458px;
+    left: 372px;
+}
+
+.game-screen-token-5-5 {
+    top: 458px;
+    left: 460px;
+}
+
+.game-screen-token-6-5 {
+    top: 458px;
+    left: 548px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-nav-button {
+    padding: 8px;
+    background-color: rgb(106, 48, 255);
+    text-decoration: none;
+    color: black;
+    border-radius: 16px;
+}
+
+.restart-button {
+    border: none;
+    cursor: pointer;
+}
+
+.main-nav-button:hover {
+    background-color: aquamarine;
+}
+
+.main-footer {
+    background-color: purple;
+    margin-top: -88px;
+    z-index: -1;
+    height: 188px;
+}
