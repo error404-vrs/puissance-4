@@ -290,3 +290,8 @@ main {
     z-index: -1;
     height: 188px;
 }
+
+.board {
+    border-bottom: 12px solid black;
+    border-radius: 54px;
+}
