@@ -3,6 +3,18 @@ const $gameScreenTokens = document.querySelectorAll(".game-screen-token");
 const $gameBoardClass = document.querySelector(".game-board-class");
 const $pointer = document.querySelector(".rowPointer");
 
+// Game screens
+const $homeElement = document.querySelector(".home-element")
+const $gameBoard = document.querySelector(".game-board")
+
+// Game buttons
+const $pvcGame = document.querySelector(".pvc-game")
+const $gameRulesButton = document.querySelector(".rules-button")
+const $rules = document.querySelector(".rules-element-hidden")
+const $rulesContent = document.querySelector(".rules-class")
+
+const $returnToMenuButton = document.querySelector(".main-nav-button")
+
 const redToken = `<img src="./assets/counter-red-large.svg" alt="">`;
 const yellowToken = `<img src="./assets/counter-yellow-large.svg" alt="">`;
 
@@ -17,81 +29,50 @@ let gameBoard = [
   ["", "", "", "", "", "", ""],
 ];
 
-/**
- *
- */
 
 function clearBoard() {
-  location.reload();
+  $gameCell.remove = redToken && yellowToken
 }
-
-// $gameScreenTokens.forEach(function ($gameScreenToken) {
-//   $gameScreenToken.addEventListener("click", function () {
-//     const x = $gameScreenToken.getAttribute("data-x");
-
-//     function dropToken(player) {
-//       for (let i = 5; i >= 0; i--) {
-//         if (gameBoard[i][x] === "") {
-//           console.log("C'est vide");
-//           document.querySelector(`
-            
-//             [data-y="${i}"][data-x="${x}"]
-            
-//             `).innerHTML = player;
-//           break;
-//         } else {
-//           console.log("C'est pas vide");
-//         }
-//       }
-//     }
-//     if (($gameScreenTokens.innerHTML = " ")) {
-//       if (currentPlayer === "red") {
-//         dropToken(redToken)
-//         currentPlayer = "yellow";
-//       } else {
-//         dropToken(yellowToken)
-//         currentPlayer = "red";
-//       }
-//     }
-//   });
-// });
+$gameScreenTokens.forEach(($tokensRow) => {
+  $tokensRow.addEventListener("click", () => {
+    const dataX = $tokensRow.getAttribute("data-x");
+    for (let i = 5; i >= 0; i--) {
+      if (gameBoard[i][dataX] === "") {
+        console.log("C'est vide");
+        gameBoard[i][dataX] = currentPlayer;
+        if (currentPlayer === "red") {
+          const selectedToken = document.querySelector(`.game-screen-token[data-y="${i}"][data-x="${dataX}"]`)
+          selectedToken.innerHTML = redToken
+          currentPlayer = "yellow";
+        } else {
+          const selectedToken = document.querySelector(`.game-screen-token[data-y="${i}"][data-x="${dataX}"]`)
+          selectedToken.innerHTML = yellowToken
+          currentPlayer = "red";
+        }
+        return;
+      } else {
+        console.log("Ce n'est pas vide");
+      }
+    }
+  });
+});
 
 
-// $gameScreenTokens.forEach(function($gameScreenToken) {
-//     if (innerHTML = redToken) {
-//         $gameScreenToken.innerHTML = redToken
-//     } else if (innerHTML = yellowToken) {
-//         $gameScreenToken.innerHTML = yellowToken
-//     }
-// })
 
-function showGameBoardPvc() {
-  homePage = document.querySelector(".home-element")
-  rules = document.querySelector(".rules-element-hidden")
-  gameboardpvc = document.querySelector(".game-board-element-hidden")
-  rules.style.display = "none"
-  homePage.style.display = 'none';
-  gameboardpvc.style.visibility = "visible";
-}
 
-function showRules() {
-  homePage = document.querySelector(".home-element")
-  homePage.style.display = 'none';
-  rules = document.querySelector(".rules-element-hidden")
-  rules.style.display = "flex"
-}
+$pvcGame.addEventListener("click", function() {
+  $homeElement.classList.add("hidden")
+  $gameBoard.classList.remove("hidden")
+})
 
-function closeRules() {
-  rules = document.querySelector(".rules-element-hidden")
-  rules.style.display = "none";
-  homePage = document.querySelector(".home-element")
-  homePage.style.display = 'flex';
-}
+$rules.addEventListener("click", function() {
+  $homeElement.classList.add("hidden")
+  $rules.classList.remove("hidden")
+  $rulesContent.classList.remove("hidden")
+})
 
-function returnToMenu() {
-  homePage = document.querySelector(".home-element")
-  homePage.style.display = 'flex';
-  gameboardpvc = document.querySelector(".game-board-element-hidden")
-  gameboardpvc.style.visibility = "hidden";
-}
+$returnToMenuButton.addEventListener("click", function() {
+  $gameBoardClass.classList.add("hidden")
+  $homeElement.classList.remove("hidden")
+})
 
