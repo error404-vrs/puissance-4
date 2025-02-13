@@ -9,63 +9,124 @@
 </head>
 <body>
     <main>
-        <nav class="main-nav">
-            <a href="Pages/menu.html" class="main-nav-button">MENU</a>
-            <img src="assets/logo.svg" alt="Site Logo">
-            <button class="restart-button main-nav-button" onclick="clearBoard( )" id="restart">RESTART</button>
-        </nav>
-        <div class="row-board-class">
-            <img src="assets/row.svg" alt="" class="row-img" id="rowPointer">
+        <div class="home-element">
+            <div class="main-menu">
+                <div class="main-menu-logo-class">
+                    <img src="assets/logo.svg" alt="Piussance 4 logo">
+                </div>
+                <button class="pvc-game" onclick="showGameBoardPvc()">
+                    <h3>
+                        PLAY VS CPU
+                    </h3>
+                    <img src="assets/player-vs-cpu.svg" alt="">
+                </button>
+                <button class="pvp-game">
+                    <h3>
+                        Player VS Player
+                    </h3>
+                    <img src="assets/player-vs-player.svg" alt="">
+                </button>
+                <button onclick="showRules()">
+                    <h3>
+                        GAMES RULES
+                    </h3>
+                </button>
+            </div>
         </div>
-        <div class="game-board-class">
-            <img src="assets/board.svg" alt="Game Board" class="board" id="game-board">
-            <div class="game-screen-token game-screen-token-0-0" data-y="0" data-x="0" ></div>
-            <div class="game-screen-token game-screen-token-1-0" data-y="0" data-x="1" ></div>
-            <div class="game-screen-token game-screen-token-2-0" data-y="0" data-x="2" ></div>
-            <div class="game-screen-token game-screen-token-3-0" data-y="0" data-x="3" ></div>
-            <div class="game-screen-token game-screen-token-4-0" data-y="0" data-x="4" ></div>
-            <div class="game-screen-token game-screen-token-5-0" data-y="0" data-x="5" ></div>
-            <div class="game-screen-token game-screen-token-6-0" data-y="0" data-x="6" ></div>
-            <div class="game-screen-token game-screen-token-0-1" data-y="1" data-x="0" ></div>
-            <div class="game-screen-token game-screen-token-1-1" data-y="1" data-x="1" ></div>
-            <div class="game-screen-token game-screen-token-2-1" data-y="1" data-x="2" ></div>
-            <div class="game-screen-token game-screen-token-3-1" data-y="1" data-x="3" ></div>
-            <div class="game-screen-token game-screen-token-4-1" data-y="1" data-x="4" ></div>
-            <div class="game-screen-token game-screen-token-5-1" data-y="1" data-x="5" ></div>
-            <div class="game-screen-token game-screen-token-6-1" data-y="1" data-x="6" ></div>
-            <div class="game-screen-token game-screen-token-0-2" data-y="2" data-x="0" ></div>
-            <div class="game-screen-token game-screen-token-1-2" data-y="2" data-x="1" ></div>
-            <div class="game-screen-token game-screen-token-2-2" data-y="2" data-x="2" ></div>
-            <div class="game-screen-token game-screen-token-3-2" data-y="2" data-x="3" ></div>
-            <div class="game-screen-token game-screen-token-4-2" data-y="2" data-x="4" ></div>
-            <div class="game-screen-token game-screen-token-5-2" data-y="2" data-x="5" ></div>
-            <div class="game-screen-token game-screen-token-6-2" data-y="2" data-x="6" ></div>
-            <div class="game-screen-token game-screen-token-0-3" data-y="3" data-x="0" ></div>
-            <div class="game-screen-token game-screen-token-1-3" data-y="3" data-x="1" ></div>
-            <div class="game-screen-token game-screen-token-2-3" data-y="3" data-x="2" ></div>
-            <div class="game-screen-token game-screen-token-3-3" data-y="3" data-x="3" ></div>
-            <div class="game-screen-token game-screen-token-4-3" data-y="3" data-x="4" ></div>
-            <div class="game-screen-token game-screen-token-5-3" data-y="3" data-x="5" ></div>
-            <div class="game-screen-token game-screen-token-6-3" data-y="3" data-x="6" ></div>
-            <div class="game-screen-token game-screen-token-0-4" data-y="4" data-x="0" ></div>
-            <div class="game-screen-token game-screen-token-1-4" data-y="4" data-x="1" ></div>
-            <div class="game-screen-token game-screen-token-2-4" data-y="4" data-x="2" ></div>
-            <div class="game-screen-token game-screen-token-3-4" data-y="4" data-x="3" ></div>
-            <div class="game-screen-token game-screen-token-4-4" data-y="4" data-x="4" ></div>
-            <div class="game-screen-token game-screen-token-5-4" data-y="4" data-x="5" ></div>
-            <div class="game-screen-token game-screen-token-6-4" data-y="5" data-x="6" ></div>
-            <div class="game-screen-token game-screen-token-0-5" data-y="5" data-x="0" ></div>
-            <div class="game-screen-token game-screen-token-1-5" data-y="5" data-x="1" ></div>
-            <div class="game-screen-token game-screen-token-2-5" data-y="5" data-x="2" ></div>
-            <div class="game-screen-token game-screen-token-3-5" data-y="5" data-x="3" ></div>
-            <div class="game-screen-token game-screen-token-4-5" data-y="5" data-x="4" ></div>
-            <div class="game-screen-token game-screen-token-5-5" data-y="5" data-x="5" ></div>
-            <div class="game-screen-token game-screen-token-6-5" data-y="7" data-x="6" ></div>
+        <div class="rules-element-hidden">
+            <div class="rules">
+                <h2>
+                    RULES
+                </h2>
+                <h3>
+                    OBJECTIVE
+                </h3>
+                <P>
+                    Be the first player to connect 4 of the same colored discs in a row (either vertically, horizontally, or diagonally)
+                </P>
+                <H3>
+                    HOW TO PLAY
+                </H3>
+                <ol>
+                    <li>
+                        Red goes first in the first game.
+                    </li>
+                    <li>
+                        Players must alternate turns, and only one disc can be dropped in each turn. 
+                    </li>
+                    <li>
+                        The game ends when there is a 4-in-a-row or a stalemate.
+                    </li>
+                    <li>
+                        The starter of the previous game goes second on the next game.
+                    </li>
+                </ol>
+                <div class="close-rules" id="close-rules-button">
+                    <button class="check-rules-button" onclick="closeRules()">
+                        <img src="assets/icon-check.svg" class="check-rules" alt="">
+                    </button>
+                </div>
+            </div>
         </div>
+        <div class="game-board-element-hidden" id="gameboardpvc">
+            <nav class="main-nav">
+                <button  class="main-nav-button" onclick="returnToMenu()">MENU</button>
+                <img src="assets/logo.svg" alt="Site Logo">
+                <button class="restart-button main-nav-button" onclick="clearBoard( )" id="restart">RESTART</button>
+            </nav>
+            <div class="row-board-class">
+                <img src="assets/row.svg" alt="" class="row-img" id="rowPointer">
+            </div>
+            <div class="game-board-class">
+                <img src="assets/board.svg" alt="Game Board" class="board" id="game-board">
+                <div class="game-screen-token game-screen-token-0-0" data-y="0" data-x="0" ></div>
+                <div class="game-screen-token game-screen-token-1-0" data-y="0" data-x="1" ></div>
+                <div class="game-screen-token game-screen-token-2-0" data-y="0" data-x="2" ></div>
+                <div class="game-screen-token game-screen-token-3-0" data-y="0" data-x="3" ></div>
+                <div class="game-screen-token game-screen-token-4-0" data-y="0" data-x="4" ></div>
+                <div class="game-screen-token game-screen-token-5-0" data-y="0" data-x="5" ></div>
+                <div class="game-screen-token game-screen-token-6-0" data-y="0" data-x="6" ></div>
+                <div class="game-screen-token game-screen-token-0-1" data-y="1" data-x="0" ></div>
+                <div class="game-screen-token game-screen-token-1-1" data-y="1" data-x="1" ></div>
+                <div class="game-screen-token game-screen-token-2-1" data-y="1" data-x="2" ></div>
+                <div class="game-screen-token game-screen-token-3-1" data-y="1" data-x="3" ></div>
+                <div class="game-screen-token game-screen-token-4-1" data-y="1" data-x="4" ></div>
+                <div class="game-screen-token game-screen-token-5-1" data-y="1" data-x="5" ></div>
+                <div class="game-screen-token game-screen-token-6-1" data-y="1" data-x="6" ></div>
+                <div class="game-screen-token game-screen-token-0-2" data-y="2" data-x="0" ></div>
+                <div class="game-screen-token game-screen-token-1-2" data-y="2" data-x="1" ></div>
+                <div class="game-screen-token game-screen-token-2-2" data-y="2" data-x="2" ></div>
+                <div class="game-screen-token game-screen-token-3-2" data-y="2" data-x="3" ></div>
+                <div class="game-screen-token game-screen-token-4-2" data-y="2" data-x="4" ></div>
+                <div class="game-screen-token game-screen-token-5-2" data-y="2" data-x="5" ></div>
+                <div class="game-screen-token game-screen-token-6-2" data-y="2" data-x="6" ></div>
+                <div class="game-screen-token game-screen-token-0-3" data-y="3" data-x="0" ></div>
+                <div class="game-screen-token game-screen-token-1-3" data-y="3" data-x="1" ></div>
+                <div class="game-screen-token game-screen-token-2-3" data-y="3" data-x="2" ></div>
+                <div class="game-screen-token game-screen-token-3-3" data-y="3" data-x="3" ></div>
+                <div class="game-screen-token game-screen-token-4-3" data-y="3" data-x="4" ></div>
+                <div class="game-screen-token game-screen-token-5-3" data-y="3" data-x="5" ></div>
+                <div class="game-screen-token game-screen-token-6-3" data-y="3" data-x="6" ></div>
+                <div class="game-screen-token game-screen-token-0-4" data-y="4" data-x="0" ></div>
+                <div class="game-screen-token game-screen-token-1-4" data-y="4" data-x="1" ></div>
+                <div class="game-screen-token game-screen-token-2-4" data-y="4" data-x="2" ></div>
+                <div class="game-screen-token game-screen-token-3-4" data-y="4" data-x="3" ></div>
+                <div class="game-screen-token game-screen-token-4-4" data-y="4" data-x="4" ></div>
+                <div class="game-screen-token game-screen-token-5-4" data-y="4" data-x="5" ></div>
+                <div class="game-screen-token game-screen-token-6-4" data-y="4" data-x="6" ></div>
+                <div class="game-screen-token game-screen-token-0-5" data-y="5" data-x="0" ></div>
+                <div class="game-screen-token game-screen-token-1-5" data-y="5" data-x="1" ></div>
+                <div class="game-screen-token game-screen-token-2-5" data-y="5" data-x="2" ></div>
+                <div class="game-screen-token game-screen-token-3-5" data-y="5" data-x="3" ></div>
+                <div class="game-screen-token game-screen-token-4-5" data-y="5" data-x="4" ></div>
+                <div class="game-screen-token game-screen-token-5-5" data-y="5" data-x="5" ></div>
+                <div class="game-screen-token game-screen-token-6-5" data-y="5" data-x="6" ></div>
+            </div>
     </main>
     <footer class="main-footer">
-            
     </footer>   
+</div>
+
     <script src="js/app.js"></script>
 </body>
 </html>
