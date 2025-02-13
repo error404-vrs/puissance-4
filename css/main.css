@@ -36,6 +36,7 @@ main {
 }
 
 .game-screen-token {
+    /* border-left: px solid black; */
     position: absolute;
     height: 72px;
     width: 72px;
